@@ -2,7 +2,6 @@ package com.javarush.task.task33.task3310;
 
 import com.javarush.task.task33.task3310.strategy.*;
 
-import javax.xml.crypto.Data;
 import java.sql.SQLException;
 import java.util.Date;
 import java.util.HashSet;
@@ -11,12 +10,13 @@ import java.util.Set;
 public class Solution {
     public static void main(String[] args) throws SQLException {
         testStrategy(new JdbcStorageStrategy(), 10000);
-        testStrategy(new HashMapStorageStrategy(), 10000);
-        testStrategy(new OurHashMapStorageStrategy(), 10000);
-        testStrategy(new FileStorageStrategy(), 100);
-        testStrategy(new OurHashBiMapStorageStrategy(), 10000);
-        testStrategy(new HashBiMapStorageStrategy(), 10000);
-        testStrategy(new DualHashBidiMapStorageStrategy(), 10000);
+        testStrategy(new HashMapDoubleThreadStorageStrategy(), 10000);
+//        testStrategy(new HashMapStorageStrategy(), 10000);
+//        testStrategy(new OurHashMapStorageStrategy(), 10000);
+//        testStrategy(new FileStorageStrategy(), 100);
+//        testStrategy(new OurHashBiMapStorageStrategy(), 10000);
+//        testStrategy(new HashBiMapStorageStrategy(), 10000);
+//        testStrategy(new DualHashBidiMapStorageStrategy(), 10000);
 
     }
 
